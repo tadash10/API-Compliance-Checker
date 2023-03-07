@@ -52,3 +52,42 @@ In a CI/CD pipeline, the tool will exit with a status code of 1 if non-complianc
 Authors
 
 This project was created by Tadash10.
+
+To install and use the API Security Compliance Checker tool through CLI bash, follow the instructions below:
+Installation
+
+    Clone the GitHub repository:
+
+bash
+
+git clone https://github.com/your_username/api-security-compliance-checker.git
+
+    Install OpenSCAP compliance-checking library if it is not already installed:
+
+csharp
+
+sudo apt-get install openscap-utils
+
+    Navigate to the cloned directory:
+
+bash
+
+cd api-security-compliance-checker
+
+Usage
+
+    Execute the script using the command:
+
+bash api_security_compliance_checker.sh
+
+    Follow the prompts to enter the API endpoint and the path to the associated security configuration file.
+
+    The script will check compliance against ISO 27001, PCI-DSS, and HIPAA standards and display the results. If non-compliance issues are found, the script will give the option to attempt automated remediation.
+
+    To run compliance checks in a CI/CD pipeline, use the check_pipeline_compliance() function and pass the relevant standard as an argument.
+
+    To customize the tool for additional compliance standards or add new features, modify the Python script accordingly.
+
+Note: This tool is intended as a starting point for API security compliance checking and should be customized to suit your specific needs and compliance requirements.
+
+
